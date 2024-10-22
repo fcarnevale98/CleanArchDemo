@@ -1,3 +1,4 @@
+using CleanArch.Api.Configurations;
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
 using Microsoft.AspNetCore.Builder;
@@ -41,6 +42,8 @@ namespace CleanArch.Api
             });
 
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Startup).Assembly));
+
+            services.RegisterAutoMapper();
 
             RegisterServices(services);
         }
