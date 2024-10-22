@@ -41,6 +41,9 @@ namespace CleanArch.Mvc
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Startup).Assembly));
+
             RegisterServices(services);
         }
 
