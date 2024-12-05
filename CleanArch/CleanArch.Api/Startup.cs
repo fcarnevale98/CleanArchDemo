@@ -33,6 +33,9 @@ namespace CleanArch.Api
             services.AddDbContext<UniversityDBContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("UniversityDBConnection"));
             });
+            services.AddDbContext<FShopDBContext>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("FShopDBConnection"));
+            });
 
             services.AddControllers();
 

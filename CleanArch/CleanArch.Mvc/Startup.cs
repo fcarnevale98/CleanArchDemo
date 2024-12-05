@@ -39,6 +39,9 @@ namespace CleanArch.Mvc
             services.AddDbContext<UniversityDBContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("UniversityDBConnection"));
             });
+            services.AddDbContext<FShopDBContext>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("FShopDBConnection"));
+            });
 
             services.AddControllersWithViews();
             services.AddRazorPages();

@@ -8,6 +8,7 @@ namespace CleanArch.Application.ViewModels
     {
         public int Id { get; set; }
         public ItemViewModel Item { get; set; }
+        public double UnitPrice { get; set; }
         public int Quantity { get; set; }
     }
 }
