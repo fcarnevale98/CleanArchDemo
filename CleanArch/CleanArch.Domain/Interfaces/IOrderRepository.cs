@@ -5,8 +5,9 @@ using CleanArch.Domain.Models;
 
 namespace CleanArch.Domain.Interfaces
 {
-    public interface IPurchaseItemRepository
+    public interface IOrderRepository
     {
-        
+        Order GetOrderById(int id);
+        void Add(Order order);
     }
 }

@@ -5,8 +5,9 @@ using CleanArch.Domain.Models;
 
 namespace CleanArch.Domain.Interfaces
 {
-    public interface IPurchaseItemRepository
+    public interface ICartRepository
     {
-        
+        Cart GetCartById(int id);
+        void Add(Cart cart);
     }
 }
