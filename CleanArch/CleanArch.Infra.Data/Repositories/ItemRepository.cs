@@ -27,9 +27,9 @@ namespace CleanArch.Infra.Data.Repositories
             return _ctx.Items.Where( i => i.Name.Contains(searchQuery) );
         }
 
-        public Item GetItemById(int id)
+        public IQueryable<Item> GetItemById(int id)
         {
-            return _ctx.Items.FirstOrDefault( i => i.Id == id );
+            return _ctx.Items.Where( i => i.Id == id );
         }
     }
 }

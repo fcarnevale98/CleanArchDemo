@@ -10,6 +10,6 @@ namespace CleanArch.Domain.Interfaces
     {
         IQueryable<Item> GetItems();
         IQueryable<Item> GetItemsFromSearch(string searchQuery);
-        Item GetItemById(int id);
+        IQueryable<Item> GetItemById(int id);
     }
 }
